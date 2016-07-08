@@ -1,0 +1,103 @@
+/* R. C. Howell 2016 */
+
+/* Global styles */
+
+body {
+    background: #F9F9F9;
+    font-family: 'Quicksand', sans-serif;
+}
+
+a:hover {
+    color: #FFC400;
+}
+
+/* End Global Styles */
+
+/* Template Overrides */
+
+#page-content-wrapper {
+    padding: 0;
+}
+
+#sidebar-wrapper {
+    background-color: #fff;
+    -webkit-box-shadow: 1px -1px 0 0 #e7e7e7;
+    -moz-box-shadow: 1px -1px 0 0 #e7e7e7;
+    box-shadow: 1px -1px 0 0 #e7e7e7;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    /*color: rgba(255,196,0, 0.5);*/
+    color: #999999;
+    background: #F9F9F9;
+    padding-left: -4px;
+    border-left: 4px solid rgba(255,196,0, 0.5);
+}
+
+.sidebar-nav > .active {
+    text-decoration: none;
+    color: #999999;
+    padding-left: -4px;
+    border-left: 4px solid rgba(255,196,0, 0.5);
+}
+
+.sidebar-nav > .sidebar-brand {
+    /*background: #37474F;*/
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #E7E7E7;
+}
+
+.sidebar-nav > .sidebar-brand a {
+
+    color: #37474F;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #FFC400;
+    background: none;
+}
+
+.sidebar-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #F7F7F7;
+    font-size: 10px;
+    line-height: 10px;
+    padding: 12px 0;
+    text-align: center;
+}
+
+
+/* End Sidebar Overrides */
+
+#search {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding-left: 12px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+#search:focus, #search:hover {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #e7e7e7;
+    border-left: 4px solid rgba(255,196,0, 0.5);
+    padding-left: 8px;
+}
+
+/* List item css */
+.list-group {
+    margin: 20px;
+    list-style-type: none;
+}
+
+
+.col {
+    border-right: 1px solid #F9F9F9;
+}

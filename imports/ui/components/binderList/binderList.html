@@ -1,0 +1,18 @@
+<div class="row">
+    <input id="search" type="text" placeholder="search" title="Search site" ng-model="search"/>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <ul class="list-group">
+            <li class="list-group-item-heading">
+                <span class="col-lg-4 col-md-4 col-sm-4 col">Class</span>
+                <span class="col-lg-4 col-md-4 col-sm-4 col">Subject</span>
+                <span class="col-lg-4 col-md-4 col-sm-4 col">Course Number</span>
+            </li>
+            <li ng-repeat="binder in $ctrl.binders | filter:search" class="list-group-item row">
+                <span class="col-lg-4 col-md-4 col-sm-4 col">{{ binder.title }}</span>
+                <span class="col-lg-4 col-md-4 col-sm-4 col">{{ binder.number }}</span>
+            </li>
+        </ul>
+    </div>
+</div>
