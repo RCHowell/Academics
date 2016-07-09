@@ -4,7 +4,7 @@
 import angular from 'angular'
 import angularMeteor from 'angular-meteor'
 import template from './binderList.html'
-import { Binders } from '../../../api/binders'
+import { Binders } from '../../../api/binders.js'
 
 class binderController {
     constructor($scope) {
@@ -12,13 +12,9 @@ class binderController {
 
         this.helpers({
             binders() {
-                return Binders.find({}, {
-                    sort: {
-                        name: 1
-                    }
-                });
+                return Binders.find({});
             }
-        })
+        });
     }
 }
 

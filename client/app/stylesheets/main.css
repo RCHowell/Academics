@@ -97,7 +97,13 @@ a:hover {
     list-style-type: none;
 }
 
+.list-header {
+    font-weight: bold;
+    background: #F9F9F9;
+}
 
 .col {
     border-right: 1px solid #F9F9F9;
 }
+
+/* End list css */
