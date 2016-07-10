@@ -47,6 +47,7 @@ a:hover {
     height: 40px;
     line-height: 40px;
     border-bottom: 1px solid #E7E7E7;
+    pointer-events: none;
 }
 
 .sidebar-nav > .sidebar-brand a {
