@@ -1,0 +1,19 @@
+<div class="row">
+    <input id="search" type="text" placeholder="Search brothers" ng-model="search"/>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <ul class="list-group">
+            <li class="list-group-item row list-header">
+                <span class="col-lg-4 col-md-4 col-sm-4 col">Name</span>
+                <span class="col-lg-4 col-md-4 col-sm-4 col">Major</span>
+                <span class="col-lg-4 col-md-4 col-sm-4 col">Class</span>
+            </li>
+            <li ng-repeat="brother in $ctrl.brothers | filter:search" class="list-group-item row">
+                <span class="col-lg-4 col-md-4 col-sm-4 col">{{ brother.firstName }} {{ brother.lastName }}</span>
+                <span class="col-lg-4 col-md-4 col-sm-4 col">{{ brother.major }}</span>
+                <span class="col-lg-4 col-md-4 col-sm-4 col">{{ brother.class }}</span>
+            </li>
+        </ul>
+    </div>
+</div>

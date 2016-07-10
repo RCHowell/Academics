@@ -2,12 +2,14 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
 import binderList from '../imports/ui/components/binderList/binderList';
+import brotherList from '../imports/ui/components/brotherList/brotherList';
 import sidebar from '../imports/ui/components/sidebar/sidebar';
 
 angular.module('Academics', [
     angularMeteor,
     binderList.name,
     sidebar.name,
+    brotherList.name,
     uiRouter
 ]).config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
@@ -25,7 +27,7 @@ angular.module('Academics', [
             })
             .state('brothers', {
                 url: '/brothers',
-                template: '<h1>Brothers</h1>'
+                template: '<brother-list></brother-list>'
             })
             .state('classes', {
                 url: '/classes',

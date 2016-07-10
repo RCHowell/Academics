@@ -26,7 +26,7 @@ class sidebarController {
                 active: false
             },
             {
-                title: 'Class',
+                title: 'Classes',
                 href: '#classes',
                 active: false
             }
