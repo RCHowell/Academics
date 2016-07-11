@@ -40,6 +40,7 @@ a:hover {
     color: #999999;
     padding-left: -4px;
     border-left: 4px solid rgba(255,196,0, 0.5);
+    pointer-events: none;
 }
 
 .sidebar-nav > .sidebar-brand {

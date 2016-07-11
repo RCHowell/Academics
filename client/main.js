@@ -4,12 +4,14 @@ import uiRouter from 'angular-ui-router';
 import binderList from '../imports/ui/components/binderList/binderList';
 import brotherList from '../imports/ui/components/brotherList/brotherList';
 import sidebar from '../imports/ui/components/sidebar/sidebar';
+import classList from '../imports/ui/components/classList/classList';
 
 angular.module('Academics', [
     angularMeteor,
     binderList.name,
     sidebar.name,
     brotherList.name,
+    classList.name,
     uiRouter
 ]).config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
@@ -31,7 +33,7 @@ angular.module('Academics', [
             })
             .state('classes', {
                 url: '/classes',
-                template: '<h1>Classes</h1>'
+                template: '<class-list></class-list>'
             });
     }
 ]);
