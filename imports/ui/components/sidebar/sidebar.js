@@ -5,6 +5,9 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import template from './sidebar.html';
 
+import { Meteor } from 'meteor/meteor';
+import { Accounts } from 'meteor/accounts-base';
+
 class sidebarController {
     constructor($scope) {
         $scope.viewModel(this);
@@ -31,6 +34,16 @@ class sidebarController {
                 active: false
             }
         ];
+    }
+
+    toggleLogin() {
+        if (!!Meteor.userId()) {
+            Meteor.logout(function(){ console.log("Logged Out")});
+        } else {
+            Meteor.loginWithPassword("howell", prompt("Pass", ""), function(err) {
+                if (err)  console.log("Failed to authenticate")
+            });
+        }
     }
 
     setActive(link) {

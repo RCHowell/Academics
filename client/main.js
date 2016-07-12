@@ -6,6 +6,7 @@ import brotherList from '../imports/ui/components/brotherList/brotherList';
 import sidebar from '../imports/ui/components/sidebar/sidebar';
 import classList from '../imports/ui/components/classList/classList';
 import brotherView from '../imports/ui/components/brotherView/brotherView';
+import '../imports/startup/accounts-config.js';
 
 angular.module('Academics', [
     angularMeteor,
@@ -14,6 +15,7 @@ angular.module('Academics', [
     brotherList.name,
     classList.name,
     brotherView.name,
+    'accounts.ui',
     uiRouter
 ]).config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
@@ -41,5 +43,9 @@ angular.module('Academics', [
                 url: '/classes',
                 template: '<class-list></class-list>'
             });
+            // .state('admin', {
+            //     url: '/admin',
+            //     template: 
+            // });
     }
 ]);

@@ -16,6 +16,7 @@ class brotherViewController {
 
         let name = $stateParams.name_string;
         // Get brother from URL
+        
         this.helpers({
            getBrother() {
                $scope.brother = Brothers.findOne({
