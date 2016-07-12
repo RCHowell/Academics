@@ -19,6 +19,17 @@ a:hover {
     padding: 0;
 }
 
+.jumbotron {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #FFFFFF;
+    margin: 20px 4px 8px 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius:4px;
+    border: 1px solid #e7e7e7;
+}
+
 #sidebar-wrapper {
     background-color: #fff;
     -webkit-box-shadow: 1px -1px 0 0 #e7e7e7;
@@ -40,7 +51,7 @@ a:hover {
     color: #999999;
     padding-left: -4px;
     border-left: 4px solid rgba(255,196,0, 0.5);
-    pointer-events: none;
+    /*pointer-events: none;*/
 }
 
 .sidebar-nav > .sidebar-brand {
@@ -104,8 +115,21 @@ a:hover {
     background: #F9F9F9;
 }
 
+.list-header-text {
+    font-weight: bold;
+    margin: 8px 20px;
+}
+
 .col {
     border-right: 1px solid #F9F9F9;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    background: #F9F9F9;
 }
 
 /* End list css */

@@ -9,7 +9,7 @@
                 <span class="col-lg-4 col-md-4 col-sm-4 col">Major</span>
                 <span class="col-lg-4 col-md-4 col-sm-4 col">Class</span>
             </li>
-            <li ng-repeat="brother in $ctrl.brothers | filter:search" class="list-group-item row">
+            <li ng-repeat="brother in $ctrl.brothers | filter:search" class="list-group-item row clickable" ng-click="$ctrl.toBrother(brother)">
                 <span class="col-lg-4 col-md-4 col-sm-4 col">{{ brother.firstName }} {{ brother.lastName }}</span>
                 <span class="col-lg-4 col-md-4 col-sm-4 col">{{ brother.major }}</span>
                 <span class="col-lg-4 col-md-4 col-sm-4 col">{{ brother.class }}</span>

@@ -5,6 +5,7 @@ import binderList from '../imports/ui/components/binderList/binderList';
 import brotherList from '../imports/ui/components/brotherList/brotherList';
 import sidebar from '../imports/ui/components/sidebar/sidebar';
 import classList from '../imports/ui/components/classList/classList';
+import brotherView from '../imports/ui/components/brotherView/brotherView';
 
 angular.module('Academics', [
     angularMeteor,
@@ -12,6 +13,7 @@ angular.module('Academics', [
     sidebar.name,
     brotherList.name,
     classList.name,
+    brotherView.name,
     uiRouter
 ]).config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
@@ -30,6 +32,10 @@ angular.module('Academics', [
             .state('brothers', {
                 url: '/brothers',
                 template: '<brother-list></brother-list>'
+            })
+            .state('brotherView', {
+                url: '/brothers/:name_string',
+                template: '<brother-view></brother-view>'
             })
             .state('classes', {
                 url: '/classes',

@@ -1,0 +1,47 @@
+<!--<div ng-init="$ctrl.getBrother">-->
+<div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="jumbotron">
+            <div class="row">
+                <h2><strong>{{ brother.firstName }} {{ brother.lastName }}</strong></h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <h6><small>Major</small></h6>
+                    <h4>{{ brother.major }}</h4>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <h6><small>Class</small></h6>
+                    <h4>{{ brother.class }}</h4>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <h6><small>Graduation Year</small></h6>
+                    <h4>{{ brother.graduationYear }}</h4>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="list-group" ng-repeat="classList in classes">
+                <li class="list-group-item row list-header">
+                    <div class="row">
+                        <h4 class="list-header-text">{{ classList.semester }}</h4>
+                    </div>
+                    <!--<div class="row">-->
+                        <!--<span class="col-lg-5 col-md-5 col-sm-5 col">Name</span>-->
+                        <!--<span class="col-lg-4 col-md-4 col-sm-4 col">Abbreviation</span>-->
+                        <!--<span class="col-lg-3 col-md-3 col-sm-3 col">Class</span>-->
+                    <!--</div>-->
+                </li>
+                <li ng-repeat="class in classList.classes" class="list-group-item row">
+                    <span class="col-lg-5 col-md-5 col-sm-5 col">{{ class.name }}</span>
+                    <span class="col-lg-4 col-md-4 col-sm-4 col">{{ class.abbreviation }}</span>
+                    <span class="col-lg-3 col-md-3 col-sm-3 col">{{ class.number }}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

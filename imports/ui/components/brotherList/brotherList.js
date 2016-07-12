@@ -7,6 +7,7 @@ import template from './brotherList.html'
 import { Brothers } from '../../../api/brothers.js'
 
 class brotherController {
+    
     constructor($scope) {
         $scope.viewModel(this);
 
@@ -15,6 +16,11 @@ class brotherController {
                 return Brothers.find({});
             }
         });
+    }
+    
+    // Small helper method for redirection
+    toBrother(brother) {
+        window.location.href = "/#/brothers/" + brother.firstName + "_" + brother.lastName;
     }
 }
 
