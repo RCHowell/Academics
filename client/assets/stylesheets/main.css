@@ -136,10 +136,10 @@ a:hover {
 
 /* Form CSS */
 .form-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: 250px;
     right: 0;
     background: rgba(0, 0, 0, 0.7);
 }
@@ -151,4 +151,10 @@ a:hover {
     border-radius: 4px;
     padding: 40px;
     border: 1px solid #e7e7e7;
+}
+
+.add-button {
+    display: block;
+    float: right;
+    margin: 20px 5px 0px 5px;
 }

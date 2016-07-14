@@ -1,8 +1,14 @@
 <div class="row">
     <input id="search" type="text" placeholder="Search Binders" title="Search site" ng-model="search"/>
 </div>
+<div class="row" ng-if="isAdmin" >
+    <div class="col-lg-12">
+        <button class="btn btn-default add-button" ng-click="toggleForm()">
+            Add Binder<i class="fa fa-add"></i>
+        </button>
+    </div>
+</div>
 <div class="row">
-    <h1>{{ age }}</h1>
     <div class="col-lg-12">
         <ul class="list-group">
             <li class="list-group-item row list-header">
@@ -15,7 +21,7 @@
                 <span class="col-lg-3 col-md-3 col-sm-3 col">{{ binder.abbreviation }}</span>
                 <span class="col-lg-2 col-md-2 col-sm-2 col">{{ binder.class }}</span>
                 <span class="col-lg-1 col-md-1 col-sm-1" ng-if="isAdmin">
-                    <i class="fa fa-edit clickable" aria-hidden="true" ng-click="editBinder(binder)"></i>
+                    <i class="fa fa-edit clickable" aria-hidden="true" ng-click="toggleForm(binder)"></i>
                 </span>
                 <span class="col-lg-1 col-md-1 col-sm-1" ng-if="isAdmin">
                     <i class="fa fa-trash-o clickable" aria-hidden="true"></i>

@@ -17,7 +17,7 @@ class binderController {
         $scope.isAdmin = (!!Meteor.userId());
         $scope.showForm = false;
 
-        $scope.editBinder = function(binder) {
+        $scope.toggleForm = function(binder) {
             $scope.showForm = true;
             $scope.formData = binder;
         };
