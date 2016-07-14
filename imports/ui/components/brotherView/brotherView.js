@@ -10,12 +10,23 @@ import { Classes } from '../../../api/classes.js';
 class brotherViewController {
     
     
-    constructor($scope, $stateParams) {
+    constructor($scope, $stateParams, $reactive) {
 
         $scope.viewModel(this);
 
         let name = $stateParams.name_string;
         // Get brother from URL
+
+        $reactive(this).attach($scope);
+
+        $scope.isAdmin = (!!Meteor.userId());
+        $scope.showForm = false;
+
+        $scope.toggleForm = function() {
+            $scope.showForm = true;
+        };
+
+        $scope.hideForm = function() { $scope.showForm = false; };
         
         this.helpers({
            getBrother() {

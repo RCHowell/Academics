@@ -22,7 +22,7 @@ class binderController {
             $scope.formData = binder;
         };
 
-        $scope.hideForm = function() { $scope.showForm = false; }
+        $scope.hideForm = function() { $scope.showForm = false; };
 
 
         this.helpers({
