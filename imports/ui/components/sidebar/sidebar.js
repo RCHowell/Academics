@@ -6,7 +6,6 @@ import angularMeteor from 'angular-meteor';
 import template from './sidebar.html';
 
 import { Meteor } from 'meteor/meteor';
-import { Accounts } from 'meteor/accounts-base';
 
 class sidebarController {
     constructor($scope) {

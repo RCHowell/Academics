@@ -2,18 +2,43 @@
     <input id="search" type="text" placeholder="Search Binders" title="Search site" ng-model="search"/>
 </div>
 <div class="row">
+    <h1>{{ age }}</h1>
     <div class="col-lg-12">
         <ul class="list-group">
             <li class="list-group-item row list-header">
-                <span class="col-lg-4 col-md-4 col-sm-4 col">Subject</span>
-                <span class="col-lg-4 col-md-4 col-sm-4 col">Abbreviation</span>
-                <span class="col-lg-4 col-md-4 col-sm-4 col">Class</span>
+                <span class="col-lg-5 col-md-5 col-sm-5 col">Subject</span>
+                <span class="col-lg-3 col-md-3 col-sm-3 col">Abbreviation</span>
+                <span class="col-lg-2 col-md-2 col-sm-2 col">Class</span>
             </li>
             <li ng-repeat="binder in $ctrl.binders | filter:search" class="list-group-item row">
-                <span class="col-lg-4 col-md-4 col-sm-4 col">{{ binder.subject }}</span>
-                <span class="col-lg-4 col-md-4 col-sm-4 col">{{ binder.abbreviation }}</span>
-                <span class="col-lg-4 col-md-4 col-sm-4 col">{{ binder.class }}</span>
+                <span class="col-lg-5 col-md-5 col-sm-5 col">{{ binder.subject }}</span>
+                <span class="col-lg-3 col-md-3 col-sm-3 col">{{ binder.abbreviation }}</span>
+                <span class="col-lg-2 col-md-2 col-sm-2 col">{{ binder.class }}</span>
+                <span class="col-lg-1 col-md-1 col-sm-1" ng-if="isAdmin">
+                    <i class="fa fa-edit clickable" aria-hidden="true" ng-click="editBinder(binder)"></i>
+                </span>
+                <span class="col-lg-1 col-md-1 col-sm-1" ng-if="isAdmin">
+                    <i class="fa fa-trash-o clickable" aria-hidden="true"></i>
+                </span>
             </li>
         </ul>
     </div>
+</div>
+<div class="form-overlay" ng-if="isAdmin" ng-show="showForm">
+    <form>
+        <div class="form-group">
+            <label>Subject</label>
+            <input type="text" class="form-control" placeholder="Subject" value="{{ formData.subject }}">
+        </div>
+        <div class="form-group">
+            <label>Abbreviation</label>
+            <input type="text" class="form-control" placeholder="Abbreviation" value=" {{ formData.abbreviation }}">
+        </div>
+        <div class="form-group">
+            <label>Class</label>
+            <input type="text" class="form-control" placeholder="Class" value="{{ formData.class }}">
+        </div>
+        <button class="btn btn-default" ng-click="hideForm()">Cancel</button>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
 </div>
