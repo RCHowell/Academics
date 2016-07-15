@@ -8,8 +8,20 @@ import { Brothers } from '../../../api/brothers.js'
 
 class brotherController {
     
-    constructor($scope) {
+    constructor($scope, $reactive) {
         $scope.viewModel(this);
+
+        $reactive(this).attach($scope);
+
+        $scope.isAdmin = (!!Meteor.userId());
+        $scope.showForm = false;
+
+        $scope.toggleForm = function(binder) {
+            $scope.showForm = true;
+            $scope.formData = binder;
+        };
+
+        $scope.hideForm = function() { $scope.showForm = false; };
 
         this.helpers({
             brothers() {
