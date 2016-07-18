@@ -159,6 +159,10 @@ a:hover {
     margin: 20px 5px 0px 5px;
 }
 
+pre {
+    margin-top: 12px;
+}
+
 /*.btn-primary {*/
     /*background-color: rgba(255,196,0, 0.5);*/
 /*}*/
