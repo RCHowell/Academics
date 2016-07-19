@@ -53,7 +53,7 @@ class brotherController {
                     !!brother.graduationYear && !!brother.class) return true;
             }
             return false;
-        }
+        };
     }
     
     // Small helper method for redirection

@@ -27,6 +27,37 @@ class brotherViewController {
         };
 
         $scope.hideForm = function() { $scope.showForm = false; };
+
+        $scope.delete = function(brother) {
+            if (confirm("Confirm delete")) {
+                Brothers.remove(brother._id, function (err) {
+                    (err) ? console.log(err) : alert("Deleted");
+                });
+            }
+            window.location = "/#/brothers";
+        };
+
+        $scope.update = function(brother) {
+            if (validate(brother)) {
+                Brothers.update(brother._id, {$set: {
+                    "firstName": brother.firstName,
+                    "lastName": brother.lastName,
+                    "graduationYear": brother.graduationYear,
+                    "major": brother.major,
+                    "class": brother.class
+                }}, function(err) {
+                    if (err) {
+                        console.log(err)
+                    } else {
+                        alert("Success");
+                        // Redirect to new URL for this brother
+                        window.location = "/#/brothers/" + brother.firstName + "_" + brother.lastName;
+                    }
+                });
+            }  else {
+                console.log("Form Incomplete");
+            }
+        };
         
         
         this.helpers({
@@ -45,6 +76,14 @@ class brotherViewController {
                ];
            }
         });
+
+        let validate = function (brother) {
+            if (brother) {
+                if (!!brother.firstName && !!brother.lastName &&
+                    !!brother.graduationYear && !!brother.class) return true;
+            }
+            return false;
+        };
     }
 }
 
