@@ -64,6 +64,7 @@ class binderController {
                     }
                 });
             }
+            $scope.hideForm();
         };
 
         $scope.updateBinder = function(binder) {

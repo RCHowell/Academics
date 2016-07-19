@@ -28,6 +28,7 @@ class brotherViewController {
 
         $scope.hideForm = function() { $scope.showForm = false; };
         
+        
         this.helpers({
            getBrother() {
                $scope.brother = Brothers.findOne({

@@ -3,7 +3,7 @@
 </div>
 <div class="row" ng-if="isAdmin" >
     <div class="col-lg-12">
-        <button class="btn btn-primary add-button" ng-click="addBrother()">
+        <button class="btn btn-primary add-button" ng-click="toggleForm()">
             Add Brother<i class="fa fa-add"></i>
         </button>
     </div>
@@ -23,4 +23,31 @@
             </li>
         </ul>
     </div>
+</div>
+<div class="form-overlay" ng-if="isAdmin" ng-show="showForm">
+    <form>
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" class="form-control" placeholder="First Name" ng-model="formData.firstName">
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" class="form-control" placeholder="Last Name" ng-model="formData.lastName">
+        </div>
+        <div class="form-group">
+            <label>Major</label>
+            <input type="text" class="form-control" placeholder="Major" ng-model="formData.major">
+        </div>
+        <div class="form-group">
+            <label>Class</label>
+            <input type="text" class="form-control" placeholder="Class" ng-model="formData.class">
+        </div>
+        <div class="form-group">
+            <label>Graduation Year</label>
+            <input type="number" class="form-control" placeholder="Graduation Year" ng-model="formData.graduationYear">
+        </div>
+        <button class="btn btn-default" ng-click="hideForm()">Cancel</button>
+        <button type="submit" class="btn btn-primary" ng-click="addBrother(formData)">Submit</button>
+        <pre>formData = {{formData | json}}</pre>
+    </form>
 </div>

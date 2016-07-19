@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a1253ce-8cf9-4c8c-84f6-df1361a6a972" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/stylesheets/main.css" afterPath="$PROJECT_DIR$/client/assets/stylesheets/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/binderList/binderList.html" afterPath="$PROJECT_DIR$/imports/ui/components/binderList/binderList.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/binderList/binderList.js" afterPath="$PROJECT_DIR$/imports/ui/components/binderList/binderList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/brotherList/brotherList.html" afterPath="$PROJECT_DIR$/imports/ui/components/brotherList/brotherList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/brotherList/brotherList.js" afterPath="$PROJECT_DIR$/imports/ui/components/brotherList/brotherList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.html" afterPath="$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.js" afterPath="$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.js" />
     </list>
     <ignored path="Academics.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,21 +57,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="binderList.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imports/ui/components/binderList/binderList.html">
+      <file leaf-file-name="brotherView.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="23" column="98" selection-start-line="23" selection-start-column="98" selection-end-line="23" selection-end-column="98" />
+            <state relative-caret-position="297">
+              <caret line="100" column="14" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="binderList.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/imports/ui/components/binderList/binderList.js">
+      <file leaf-file-name="brotherList.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/components/brotherList/brotherList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
+            <state relative-caret-position="327">
+              <caret line="46" column="117" selection-start-line="46" selection-start-column="117" selection-end-line="46" selection-end-column="117" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="brotherList.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/imports/ui/components/brotherList/brotherList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
               <folding>
                 <element signature="e#37#66#0" expanded="true" />
               </folding>
@@ -78,12 +89,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="brotherView.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.html">
+      <file leaf-file-name="binderList.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/components/binderList/binderList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="105" column="38" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
-              <folding />
+            <state relative-caret-position="349">
+              <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="98" selection-end-column="25" />
+              <folding>
+                <element signature="e#37#66#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,15 +140,15 @@
         <option value="$PROJECT_DIR$/client/main.js" />
         <option value="$PROJECT_DIR$/imports/ui/components/sidebar/sidebar.html" />
         <option value="$PROJECT_DIR$/imports/ui/components/sidebar/sidebar.js" />
-        <option value="$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.js" />
-        <option value="$PROJECT_DIR$/imports/ui/components/brotherList/brotherList.js" />
         <option value="$PROJECT_DIR$/imports/ui/components/classList/classList.js" />
         <option value="$PROJECT_DIR$/imports/ui/components/classList/classList.html" />
-        <option value="$PROJECT_DIR$/imports/ui/components/brotherList/brotherList.html" />
-        <option value="$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.html" />
         <option value="$PROJECT_DIR$/client/assets/stylesheets/main.css" />
         <option value="$PROJECT_DIR$/imports/ui/components/binderList/binderList.html" />
+        <option value="$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.js" />
         <option value="$PROJECT_DIR$/imports/ui/components/binderList/binderList.js" />
+        <option value="$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.html" />
+        <option value="$PROJECT_DIR$/imports/ui/components/brotherList/brotherList.html" />
+        <option value="$PROJECT_DIR$/imports/ui/components/brotherList/brotherList.js" />
       </list>
     </option>
   </component>
@@ -511,12 +524,12 @@
       <workItem from="1468235307019" duration="7128000" />
       <workItem from="1468336467018" duration="9200000" />
       <workItem from="1468484137601" duration="6530000" />
-      <workItem from="1468856109024" duration="5123000" />
+      <workItem from="1468856109024" duration="6290000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42955000" />
+    <option name="totallyTimeSpent" value="44122000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -873,24 +886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/components/brotherList/brotherList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#37#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/classList/classList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -902,14 +897,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/classList/classList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/components/brotherList/brotherList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
@@ -935,22 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/stylesheets/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="162" column="18" selection-start-line="162" selection-start-column="18" selection-end-line="162" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="105" column="38" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -961,16 +932,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/binderList/binderList.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/stylesheets/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="162" column="18" selection-start-line="162" selection-start-column="18" selection-end-line="162" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="23" column="98" selection-start-line="23" selection-start-column="98" selection-end-line="23" selection-end-column="98" />
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/binderList/binderList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
+        <state relative-caret-position="349">
+          <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="98" selection-end-column="25" />
+          <folding>
+            <element signature="e#37#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="100" column="14" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/brotherList/brotherList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="46" column="117" selection-start-line="46" selection-start-column="117" selection-end-line="46" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/brotherList/brotherList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
           <folding>
             <element signature="e#37#66#0" expanded="true" />
           </folding>

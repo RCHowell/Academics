@@ -89,21 +89,22 @@
     <form>
         <div class="form-group">
             <label>Semester</label>
-            <input type="text" class="form-control" placeholder="Semester" value="{{ formData.semester }}">
+            <input type="text" class="form-control" placeholder="Semester" ng-model="formData.semester">
         </div>
         <div class="form-group">
             <label>Name</label>
-            <input type="text" class="form-control" placeholder="Name" value="{{ formData.name }}">
+            <input type="text" class="form-control" placeholder="Name" ng-model="formData.name">
         </div>
         <div class="form-group">
             <label>Abbreviation</label>
-            <input type="text" class="form-control" placeholder="Abbreviation" value=" {{ formData.abbreviation }}">
+            <input type="text" class="form-control" placeholder="Abbreviation" ng-model="formData.abbreviation">
         </div>
         <div class="form-group">
             <label>Number</label>
-            <input type="text" class="form-control" placeholder="Number" value="{{ formData.number }}">
+            <input type="text" class="form-control" placeholder="Number" ng-model="formData.number">
         </div>
         <button class="btn btn-default" ng-click="hideForm()">Cancel</button>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+
 </div>

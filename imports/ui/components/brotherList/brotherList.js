@@ -16,18 +16,44 @@ class brotherController {
         $scope.isAdmin = (!!Meteor.userId());
         $scope.showForm = false;
 
-        $scope.toggleForm = function(binder) {
+        $scope.toggleForm = function() {
             $scope.showForm = true;
-            $scope.formData = binder;
+            $scope.formData = {};
         };
 
         $scope.hideForm = function() { $scope.showForm = false; };
+
+        $scope.addBrother = function(brother) {
+            console.log(brother);
+            if (validate(brother)) {
+                Brothers.insert({
+                    "firstName": brother.firstName,
+                    "lastName": brother.lastName,
+                    "graduationYear": brother.graduationYear,
+                    "major": brother.major,
+                    "class": brother.class
+                }, function (err) {
+                    (err) ? console.log(err) : alert("Success");
+                });
+            } else {
+                console.log("Invalid Data");
+            }
+            $scope.hideForm();
+        };
 
         this.helpers({
             brothers() {
                 return Brothers.find({});
             }
         });
+        
+        let validate = function (brother) {
+            if (brother) {
+                if (!!brother.firstName && !!brother.lastName &&
+                    !!brother.graduationYear && !!brother.class) return true;
+            }
+            return false;
+        }
     }
     
     // Small helper method for redirection
