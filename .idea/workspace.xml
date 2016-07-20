@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a1253ce-8cf9-4c8c-84f6-df1361a6a972" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/stylesheets/main.css" afterPath="$PROJECT_DIR$/client/assets/stylesheets/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.html" afterPath="$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/classList/classList.html" afterPath="$PROJECT_DIR$/imports/ui/components/classList/classList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/classList/classList.js" afterPath="$PROJECT_DIR$/imports/ui/components/classList/classList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/main.js" afterPath="$PROJECT_DIR$/server/main.js" />
-    </list>
+    <list default="true" id="6a1253ce-8cf9-4c8c-84f6-df1361a6a972" name="Default" comment="" />
     <ignored path="Academics.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -400,12 +394,12 @@
       <workItem from="1468235307019" duration="7128000" />
       <workItem from="1468336467018" duration="9200000" />
       <workItem from="1468484137601" duration="6530000" />
-      <workItem from="1468856109024" duration="21177000" />
+      <workItem from="1468856109024" duration="21261000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59009000" />
+    <option name="totallyTimeSpent" value="59093000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
