@@ -5,33 +5,84 @@ import { Classes } from '../imports/api/classes';
 
 Meteor.startup(() => {
     // code to run on server at startup
-    
-    // Add class data if it's empty
-    if (Classes.find().count() === 0) {
-        let count = 0;
-        Binders.find().forEach(function(binder) {
+});
 
-            // Check if class already exists
-            let isClass = Classes.findOne({
-                "abbreviation": binder.abbreviation,
-                "number": binder.class
-            });
+Meteor.methods({
+   'updateClassesFromBinders': function() {
+       console.log("Updating Classes From Binders");
+       Classes.remove({}, function(err) {
+           if (err) { console.log(err); }
+           else {
+               Binders.find().forEach(function (binder) {
+                   createClassFromBinder(binder);
+               });
+           }
+       });
+   },
+    'updateClassesFromBrothers': function() {
+        console.log("Updating Classes From Brothers");
+        // Loop through all brothers -> each semester -> each class in each semester
+        Brothers.find({}).forEach(function(brother) {
+            brother.classes.forEach(function(semester) {
+                semester.classes.forEach(function(_class) {
 
-            // If the class doesn't exist, then create it
-            if (!isClass) {
-                Classes.insert({
-                    "name": binder.subject,
-                    "abbreviation": binder.abbreviation,
-                    "number": binder.class,
-                    "hasBinder": true
+                    let classDoc = Classes.findOne({
+                        "name": _class.name,
+                        "abbreviation": _class.abbreviation,
+                        "number": _class.number
+                    });
+                    // check if the class exists
+                    if (!!classDoc) {
+                        setClassHasBrother(classDoc, brother);
+                    } else {
+                        createClassFromBrother(_class, brother);
+                    }
                 });
-                count++;
-            }
+            });
         });
-        
-        console.log("Inserted " + count + " classes.");
-
-    } else {
-        console.log("No new classes inserted");
     }
 });
+
+let createClassFromBinder = function(binder) {
+    Classes.insert({
+        "name": binder.subject,
+        "abbreviation": binder.abbreviation,
+        "number": binder.class,
+        "hasBinder": true,
+        "hasBrother": false,
+        "brothers": []
+    }, function(err) {
+        if (err) console.log(err);
+    });
+};
+
+let setClassHasBrother = function(_class, brother) {
+
+    Classes.update(_class._id,
+        {
+            $set: { hasBrother: true },
+            $push: { brothers: brotherToString(brother)}
+        }, {
+            upsert: false
+        }, function (err) {
+            if (err) console.log(err);
+        }
+    );
+};
+
+let createClassFromBrother = function(_class, brother) {
+    Classes.insert({
+        "name": _class.name,
+        "abbreviation": _class.abbreviation,
+        "number": _class.number,
+        "hasBinder": false,
+        "hasBrother": true,
+        "brothers": [brotherToString(brother)]
+    }, function(err) {
+        if (err) console.log(err);
+    });
+};
+
+let brotherToString = function (brother) {
+    return brother.firstName + " " + brother.lastName;
+};

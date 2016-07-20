@@ -5,6 +5,8 @@ import angular from 'angular'
 import angularMeteor from 'angular-meteor'
 import template from './classList.html'
 import { Classes } from '../../../api/classes.js'
+import { Brothers } from '../../../api/brothers.js'
+import { Binders } from '../../../api/binders.js'
 
 class classesController {
     constructor($scope, $reactive) {
@@ -13,14 +15,24 @@ class classesController {
         $reactive(this).attach($scope);
 
         $scope.isAdmin = (!!Meteor.userId());
-        $scope.showForm = false;
+        $scope.loading = false;
 
         $scope.toggleForm = function(binder) {
             $scope.showForm = true;
             $scope.formData = binder;
         };
-
-        $scope.hideForm = function() { $scope.showForm = false; };
+        
+        $scope.updateClasses = function() {
+            if (confirm("This will take a bit. Are you sure?")) {
+                $scope.loading = true;
+                Meteor.call('updateClassesFromBinders', function() {
+                    Meteor.call('updateClassesFromBrothers', function() {
+                        location.reload();
+                    });
+                });
+            }
+        };
+        
         
         this.helpers({
             classes() {

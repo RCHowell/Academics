@@ -160,10 +160,31 @@ a:hover {
     margin: 20px 5px 0px 5px;
 }
 
+/* End Form CSS */
+
 pre {
     margin-top: 12px;
 }
 
-/*.btn-primary {*/
-    /*background-color: rgba(255,196,0, 0.5);*/
-/*}*/
+#class-loading {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #FFFFFF;
+    pointer-events: none;
+    z-index:1001;
+    text-align: center;
+}
+
+#class-loading i {
+    display: block;
+    margin: 50px auto;
+}
+
+#class-loading h1 {
+     margin-top: 50px;
+     text-align: center;
+ }
+

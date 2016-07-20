@@ -17,14 +17,19 @@
                 <span class="col-lg-3 col-md-3 col-sm-3 col">Class</span>
                 <span class="col-lg-2 col-md-2 col-sm-3 col">Resources</span>
             </li>
-            <li ng-repeat="class in $ctrl.classes | filter:search" class="list-group-item row">
+            <li ng-repeat="class in $ctrl.classes | filter:search | orderBy:'name'" class="list-group-item row">
                 <span class="col-lg-4 col-md-4 col-sm-3 col">{{ class.name }}</span>
                 <span class="col-lg-3 col-md-3 col-sm-3 col">{{ class.abbreviation }}</span>
                 <span class="col-lg-3 col-md-3 col-sm-3 col">{{ class.number }}</span>
                 <span class="col-lg-2 col-md-2 col-sm-3 col">
-                    Binder <i class="fa fa-check" aria-hidden="true" ng-if="class.hasBinder"></i>
+                    <span ng-if="class.hasBinder">Binder<i class="fa fa-check" aria-hidden="true"></i></span>&emsp;
+                    <span ng-if="class.hasBrother" title="{{ class.brothers.toString() }}">Brother <i class="fa fa-check" aria-hidden="true"></i></span>
                 </span>
             </li>
         </ul>
     </div>
+</div>
+<div ng-if="isAdmin && loading" id="class-loading">
+    <h1>Updating Classes</h1>
+    <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
 </div>
