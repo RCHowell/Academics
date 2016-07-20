@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a1253ce-8cf9-4c8c-84f6-df1361a6a972" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/stylesheets/main.css" afterPath="$PROJECT_DIR$/client/assets/stylesheets/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.html" afterPath="$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.js" afterPath="$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.js" />
     </list>
@@ -58,8 +57,8 @@
       <file leaf-file-name="brotherView.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="49" column="53" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
+            <state relative-caret-position="214">
+              <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
               <folding>
                 <element signature="e#38#68#0" expanded="true" />
               </folding>
@@ -70,8 +69,8 @@
       <file leaf-file-name="brotherView.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="79" column="79" selection-start-line="79" selection-start-column="79" selection-end-line="79" selection-end-column="79" />
+            <state relative-caret-position="87">
+              <caret line="63" column="86" selection-start-line="63" selection-start-column="86" selection-end-line="63" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -500,12 +499,12 @@
       <workItem from="1468235307019" duration="7128000" />
       <workItem from="1468336467018" duration="9200000" />
       <workItem from="1468484137601" duration="6530000" />
-      <workItem from="1468856109024" duration="14854000" />
+      <workItem from="1468856109024" duration="15567000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52686000" />
+    <option name="totallyTimeSpent" value="53399000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -950,16 +949,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="79" column="79" selection-start-line="79" selection-start-column="79" selection-end-line="79" selection-end-column="79" />
+        <state relative-caret-position="87">
+          <caret line="63" column="86" selection-start-line="63" selection-start-column="86" selection-end-line="63" selection-end-column="86" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/brotherView/brotherView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="49" column="53" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
+        <state relative-caret-position="214">
+          <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
           <folding>
             <element signature="e#38#68#0" expanded="true" />
           </folding>

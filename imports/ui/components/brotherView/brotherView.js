@@ -54,6 +54,22 @@ class brotherViewController {
             }
         };
 
+        $scope.deleteSemester = function(semester) {
+            if (confirm("Are you sure?")) {
+                // item is the 'class' to remove but 'class' is a js reserved word
+                let semesterIndex = $scope.brother.classes.indexOf(semester);
+                let temp = $scope.brother.classes;
+                temp.splice(semesterIndex, 1);
+
+                // JSON.parse(angular.toJson(temp)) this has to be done to remove $$hashKey put in by Angular
+                Brothers.update($scope.brother._id, {$set: {classes: JSON.parse(angular.toJson(temp))}},
+                    {upsert: false}, function (err) {
+                        if (err) console.log(err);
+                        else console.log("Removed semester");
+                    });
+            }
+        };
+
         $scope.update = function(brother) {
             if (validate(brother)) {
                 Brothers.update(brother._id, {$set: {
