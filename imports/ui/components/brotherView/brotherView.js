@@ -37,6 +37,23 @@ class brotherViewController {
             window.location = "/#/brothers";
         };
 
+        $scope.deleteClass = function(item, classList) {
+            if (confirm("Are you sure?")) {
+                // item is the 'class' to remove but 'class' is a js reserved word
+                let classIndex = classList.classes.indexOf(item);
+                let classListIndex = $scope.brother.classes.indexOf(classList);
+                let temp = $scope.brother.classes;
+                temp[classListIndex].classes.splice(classIndex, 1);
+
+                // JSON.parse(angular.toJson(temp)) this has to be done to remove $$hashKey put in by Angular
+                Brothers.update($scope.brother._id, {$set: {classes: JSON.parse(angular.toJson(temp))}},
+                    {upsert: false}, function (err) {
+                        if (err) console.log(err);
+                        else console.log("Removed class");
+                    });
+            }
+        };
+
         $scope.update = function(brother) {
             if (validate(brother)) {
                 Brothers.update(brother._id, {$set: {

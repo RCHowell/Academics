@@ -113,11 +113,12 @@ a:hover {
 .list-header {
     font-weight: bold;
     background: #F9F9F9;
+    padding: 10px 15px 8px 15px;
 }
 
 .list-header-text {
     font-weight: bold;
-    margin: 8px 20px;
+    margin: 8px 20px 4px 20px;
 }
 
 .col {

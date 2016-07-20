@@ -78,7 +78,7 @@
                     <span class="col-lg-3 col-md-3 col-sm-3 col">{{ class.abbreviation }}</span>
                     <span class="col-lg-3 col-md-3 col-sm-3 col">{{ class.number }}</span>
                     <span class="col-lg-1 col-md-1 col-sm-1" ng-show="isAdmin">
-                        <i class="fa fa-trash-o" aria-hidden="true" ng-click="deleteClass($index)"></i>
+                        <i class="fa fa-trash-o clickable" aria-hidden="true" ng-click="deleteClass(class, classList)"></i>
                     </span>
                 </li>
             </ul>
