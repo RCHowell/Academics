@@ -41,7 +41,7 @@
                         <input type="text" class="form-control" ng-model="brother.class">
                     </div>
                     <div class="form-group">
-                        <label>Graduation Yearr</label>
+                        <label>Graduation Year</label>
                         <input type="text" class="form-control" ng-model="brother.graduationYear">
                     </div>
                     <button class="btn btn-danger" ng-click="delete(brother)">Delete</button>
@@ -57,7 +57,7 @@
     </div>
     <div class="row">
         <div class="col-lg-12">
-            <ul class="list-group" ng-repeat="classList in classes">
+            <ul class="list-group" ng-repeat="classList in filteredClasses(brother.classes)">
                 <li class="list-group-item row list-header">
                     <div class="row">
                         <span class="col-lg-10 col-md-9 col-sm-7">
@@ -73,7 +73,7 @@
                         <!--<span class="col-lg-3 col-md-3 col-sm-3 col">Class</span>-->
                     <!--</div>-->
                 </li>
-                <li ng-repeat="class in classList.classes" class="list-group-item row">
+                <li ng-repeat="class in classList.classes | orderBy:'name'" class="list-group-item row">
                     <span class="col-lg-5 col-md-5 col-sm-5 col">{{ class.name }}</span>
                     <span class="col-lg-3 col-md-3 col-sm-3 col">{{ class.abbreviation }}</span>
                     <span class="col-lg-3 col-md-3 col-sm-3 col">{{ class.number }}</span>
@@ -82,6 +82,7 @@
                     </span>
                 </li>
             </ul>
+            <pre ng-if="isAdmin">Classes = {{ brother.classes | json }}</pre>
         </div>
     </div>
 </div>
@@ -104,7 +105,7 @@
             <input type="text" class="form-control" placeholder="Number" ng-model="formData.number">
         </div>
         <button class="btn btn-default" ng-click="hideForm()">Cancel</button>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" ng-click="addClass(formData)">Submit</button>
     </form>
 
 </div>
