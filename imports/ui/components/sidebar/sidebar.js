@@ -7,6 +7,8 @@ import template from './sidebar.html';
 
 import { Meteor } from 'meteor/meteor';
 
+
+
 class sidebarController {
     constructor($scope) {
         $scope.viewModel(this);
@@ -52,6 +54,9 @@ class sidebarController {
         link.active = true;
     }
 }
+
+
+sidebarController.$inject = ["$scope"];
 
 export default angular.module('sidebar', [angularMeteor])
     .component('sidebar', {

@@ -1,1 +1,4 @@
-node_modules/brother_data.csvbinder_data.csv
+node_modules
+brother_data.csv
+binder_data.csv
+settings.json

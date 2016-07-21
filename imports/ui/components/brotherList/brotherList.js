@@ -62,6 +62,8 @@ class brotherController {
     }
 }
 
+brotherController.$inject = ["$scope", "$reactive"];
+
 export default angular.module('BrotherList', [angularMeteor])
     .component('brotherList', {
         templateUrl: template,

@@ -101,6 +101,8 @@ class binderController {
     }
 }
 
+binderController.$inject = ["$scope", "$reactive"];
+
 export default angular.module('BinderList', [angularMeteor])
     .component('binderList', {
         templateUrl: template,

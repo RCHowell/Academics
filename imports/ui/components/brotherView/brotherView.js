@@ -213,6 +213,8 @@ class brotherViewController {
     }
 }
 
+brotherViewController.$inject = ["$scope", "$stateParams", "$reactive"];
+
 export default angular.module('BrotherView', [angularMeteor])
     .component('brotherView', {
         templateUrl: template,

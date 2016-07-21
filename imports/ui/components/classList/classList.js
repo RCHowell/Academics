@@ -42,6 +42,8 @@ class classesController {
     }
 }
 
+classesController.$inject = ["$scope", "$reactive"];
+
 export default angular.module('ClassList', [angularMeteor])
     .component('classList', {
         templateUrl: template,
